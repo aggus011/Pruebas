@@ -1,4 +1,4 @@
-package ar.edu.unalm.pruebaspeechtotext
+package ar.edu.unalm.pruebas
 
 import org.junit.Test
 

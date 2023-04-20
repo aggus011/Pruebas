@@ -1,4 +1,4 @@
-package ar.edu.unalm.pruebaspeechtotext.room.network
+package ar.edu.unalm.pruebas.room.network
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="10dp"
+    android:background="@color/purple_200"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/staticCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/codigo"/>
+    <TextView
+        android:id="@+id/codigoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="@string/no_data"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/staticCodigo"/>
+
+    <TextView
+        android:id="@+id/staticName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/staticCodigo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/name"/>
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/no_data"
+        app:layout_constraintTop_toBottomOf="@id/codigoText"
+        app:layout_constraintStart_toEndOf="@id/staticName"/>
+
+    <TextView
+        android:id="@+id/staticVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/staticName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/name"/>
+
+    <TextView
+        android:id="@+id/voiceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/no_data"
+        app:layout_constraintTop_toBottomOf="@id/nameText"
+        app:layout_constraintStart_toEndOf="@id/staticVoice"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,10 @@
-package ar.edu.unalm.pruebaspeechtotext.room.viewmodel
+package ar.edu.unalm.pruebas.room.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ar.edu.unalm.pruebaspeechtotext.entities.Language
-import ar.edu.unalm.pruebaspeechtotext.room.repository.LanguageRepository
+import ar.edu.unalm.pruebas.entities.Language
+import ar.edu.unalm.pruebas.room.repository.LanguageRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

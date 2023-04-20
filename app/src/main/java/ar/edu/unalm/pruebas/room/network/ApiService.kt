@@ -1,6 +1,6 @@
-package ar.edu.unalm.pruebaspeechtotext.room.network
+package ar.edu.unalm.pruebas.room.network
 
-import ar.edu.unalm.pruebaspeechtotext.entities.Language
+import ar.edu.unalm.pruebas.entities.Language
 import retrofit2.Response
 import retrofit2.http.GET
 

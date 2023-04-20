@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">pruebaSpeechToText</string>
     <string name="example">example</string>
+    <string name="codigo">Codigo:</string>
+    <string name="no_data">no data</string>
+    <string name="name">nombre</string>
 </resources>

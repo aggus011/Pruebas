@@ -1,4 +1,4 @@
-package ar.edu.unalm.pruebaspeechtotext
+package ar.edu.unalm.pruebas
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,8 +1,8 @@
-package ar.edu.unalm.pruebaspeechtotext
+package ar.edu.unalm.pruebas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ar.edu.unalm.pruebaspeechtotext.R
+import ar.edu.unalm.pruebas.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
