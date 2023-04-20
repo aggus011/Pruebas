@@ -1,4 +1,4 @@
-package ar.edu.unalm.pruebas.room.network
+package ar.edu.unlam.pruebas.room.network
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

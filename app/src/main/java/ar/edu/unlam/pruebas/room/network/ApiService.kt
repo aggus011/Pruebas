@@ -1,8 +1,8 @@
-package ar.edu.unalm.pruebas.room.network
+package ar.edu.unlam.pruebas.room.network
 
-import ar.edu.unalm.pruebas.entities.Language
+import ar.edu.unlam.pruebas.entities.Language
 import retrofit2.Response
-import retrofit2.http.GET
+import retrofit2.http.*
 
 interface ApiService {
 

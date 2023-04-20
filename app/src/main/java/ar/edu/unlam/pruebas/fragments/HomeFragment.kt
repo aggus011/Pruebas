@@ -1,4 +1,4 @@
-package ar.edu.unalm.pruebas.fragments
+package ar.edu.unlam.pruebas.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import ar.edu.unalm.pruebas.databinding.FragmentHomeBinding
-import ar.edu.unalm.pruebas.presentation.diffutil.LanguageAdapter
-import ar.edu.unalm.pruebas.room.viewmodel.LanguageViewModel
+import ar.edu.unlam.pruebas.databinding.FragmentHomeBinding
+import ar.edu.unlam.pruebas.presentation.diffutil.LanguageAdapter
+import ar.edu.unlam.pruebas.room.viewmodel.LanguageViewModel
 
 class HomeFragment: Fragment() {
 
