@@ -1,4 +1,4 @@
-package ar.edu.unlam.pruebas
+package ar.edu.unalm.pruebas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

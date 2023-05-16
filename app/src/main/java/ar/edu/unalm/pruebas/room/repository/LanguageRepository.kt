@@ -1,8 +1,8 @@
-package ar.edu.unlam.pruebas.room.repository
+package ar.edu.unalm.pruebas.room.repository
 
-import ar.edu.unlam.pruebas.entities.SupportedLanguage
+import ar.edu.unalm.pruebas.entities.SupportedLanguage
 import retrofit2.Response
-import ar.edu.unlam.pruebas.room.network.FluentAPI
+import ar.edu.unalm.pruebas.room.network.FluentAPI
 import javax.inject.Inject
 
 class LanguageRepository @Inject constructor() {

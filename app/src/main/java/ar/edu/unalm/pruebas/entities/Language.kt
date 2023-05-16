@@ -1,4 +1,4 @@
-package ar.edu.unlam.pruebas.entities
+package ar.edu.unalm.pruebas.entities
 
 data class Language(
     val language_id: Int,

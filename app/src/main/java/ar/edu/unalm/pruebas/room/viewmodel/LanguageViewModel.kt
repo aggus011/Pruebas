@@ -1,21 +1,19 @@
-package ar.edu.unlam.pruebas.room.viewmodel
+package ar.edu.unalm.pruebas.room.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import ar.edu.unlam.pruebas.entities.Language
-import ar.edu.unlam.pruebas.room.repository.LanguageRepository
+import ar.edu.unalm.pruebas.entities.Language
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.lang.Exception
 import java.lang.NullPointerException
-import java.util.Collections.emptyList
 import javax.inject.Inject
 
 @HiltViewModel
-class LanguageViewModel @Inject constructor(private val languageRepository: LanguageRepository) :
+class LanguageViewModel @Inject constructor(private val languageRepository: ar.edu.unalm.pruebas.room.repository.LanguageRepository) :
     ViewModel() {
 
     val allLanguage: MutableLiveData<MutableList<Language>> = MutableLiveData(mutableListOf())
