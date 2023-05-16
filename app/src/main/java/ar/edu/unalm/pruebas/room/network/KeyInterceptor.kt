@@ -1,4 +1,4 @@
-package ar.edu.unlam.pruebas.room.network
+package ar.edu.unalm.pruebas.room.network
 
 import okhttp3.Interceptor
 import okhttp3.Response

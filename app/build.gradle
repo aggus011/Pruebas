@@ -12,11 +12,8 @@ android {
     defaultConfig {
         applicationId 'ar.edu.unlam.pruebas'
         minSdk 23
-<<<<<<< HEAD
         targetSdk 33
-=======
         targetSdk 32
->>>>>>> 3bdd2e347d2be9af111238832daff77adb652f0e
         versionCode 1
         versionName "1.0"
 

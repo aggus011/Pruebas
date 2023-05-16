@@ -1,4 +1,4 @@
-package ar.edu.unlam.pruebas.fragments
+package ar.edu.unalm.pruebas.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,16 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-<<<<<<< HEAD:app/src/main/java/ar/edu/unalm/pruebas/fragments/HomeFragment.kt
 import ar.edu.unalm.pruebas.databinding.FragmentHomeBinding
-import ar.edu.unalm.pruebas.presentation.diffutil.LanguageAdapter
-import ar.edu.unalm.pruebas.room.viewmodel.LanguageViewModel
+
 import dagger.hilt.android.AndroidEntryPoint
-=======
-import ar.edu.unlam.pruebas.databinding.FragmentHomeBinding
-import ar.edu.unlam.pruebas.presentation.diffutil.LanguageAdapter
-import ar.edu.unlam.pruebas.room.viewmodel.LanguageViewModel
->>>>>>> 3bdd2e347d2be9af111238832daff77adb652f0e:app/src/main/java/ar/edu/unlam/pruebas/fragments/HomeFragment.kt
+import ar.edu.unalm.pruebas.diffutil.LanguageAdapter
+import ar.edu.unalm.pruebas.room.viewmodel.LanguageViewModel
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
