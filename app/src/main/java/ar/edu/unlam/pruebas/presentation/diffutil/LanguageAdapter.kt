@@ -10,7 +10,7 @@ import ar.edu.unlam.pruebas.R
 import ar.edu.unlam.pruebas.databinding.ItemLanguageBinding
 import ar.edu.unlam.pruebas.entities.Language
 
-class LanguageAdapter(var list: MutableLiveData<List<Language>?>) :
+class LanguageAdapter(var list: MutableLiveData<MutableList<Language>>) :
     Adapter<LanguageHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LanguageHolder {
         val view =
@@ -30,7 +30,7 @@ class LanguageHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private val binding = ItemLanguageBinding.bind(view)
 
-    fun render(listLanguage: List<Language>){
+    fun render(listLanguage: MutableList<Language>){
         binding.codigoText.text = listLanguage[0].language_id.toString()
         binding.nameText.text = listLanguage[0].language_name
         binding.voiceText.text = listLanguage[0].language_voice
