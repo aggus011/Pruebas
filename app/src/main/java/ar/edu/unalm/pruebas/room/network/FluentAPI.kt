@@ -1,14 +1,19 @@
 package ar.edu.unalm.pruebas.room.network
 
+import ar.edu.unalm.pruebas.entities.Language
 import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 class FluentAPI {
 
+
+
     companion object{
-        private const val baseUrl = "https://thefluentme.p.rapidapi.com/"
+        private const val baseUrl = "https://thefluent.me/api/swagger/"
         private fun buildService(): ApiService {
             val okHttpClient = OkHttpClient.Builder()
                 .connectTimeout(1, TimeUnit.MINUTES)
@@ -17,7 +22,6 @@ class FluentAPI {
                 .writeTimeout(1, TimeUnit.MINUTES)
                 .addInterceptor(KeyInterceptor())
                 .build()
-
             val builder: Retrofit.Builder = Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .client(okHttpClient)

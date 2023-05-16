@@ -10,8 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import ar.edu.unalm.pruebas.databinding.FragmentHomeBinding
 import ar.edu.unalm.pruebas.presentation.diffutil.LanguageAdapter
 import ar.edu.unalm.pruebas.room.viewmodel.LanguageViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-class HomeFragment: Fragment() {
+@AndroidEntryPoint
+class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -33,8 +35,10 @@ class HomeFragment: Fragment() {
     override fun onStart() {
         super.onStart()
 
-        languageViewModel.allLanguage.observe(viewLifecycleOwner){
-            createRecyclerView()
+        languageViewModel.getAllLanguage()
+        languageViewModel.allLanguage.observe(viewLifecycleOwner) {
+            if (it != null)
+                createRecyclerView()
         }
 
     }
