@@ -1,6 +1,5 @@
 package ar.edu.unlam.pruebas.room.network
 
-import ar.edu.unalm.pruebas.entities.Language
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
