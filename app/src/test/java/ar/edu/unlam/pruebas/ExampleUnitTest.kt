@@ -1,4 +1,4 @@
-package ar.edu.unalm.pruebas
+package ar.edu.unlam.pruebas
 
 import org.junit.Test
 

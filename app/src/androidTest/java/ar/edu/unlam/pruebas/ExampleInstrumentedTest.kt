@@ -1,4 +1,4 @@
-package ar.edu.unalm.pruebas
+package ar.edu.unlam.pruebas
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("ar.edu.unalm.pruebaspeechtotext", appContext.packageName)
+        assertEquals("ar.edu.unlam.pruebas", appContext.packageName)
     }
 }

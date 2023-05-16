@@ -1,4 +1,4 @@
-package ar.edu.unalm.pruebas.room.network
+package ar.edu.unlam.pruebas.room.network
 
 import ar.edu.unalm.pruebas.entities.Language
 import okhttp3.OkHttpClient
