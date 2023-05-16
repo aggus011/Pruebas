@@ -10,8 +10,7 @@ class KeyInterceptor : Interceptor {
         val url = request.url()
 
         val newUrl = url.newBuilder()
-            .addQueryParameter("x-access-token", "20230418130730-fQaj7AdeKhp-67524")
-            .addQueryParameter("Authorization", "Basic YWdndXMwMTE6VHQ0Mi44NjEuNzU4")
+            .addQueryParameter("x-api-key", "20230418130730-fQaj7AdeKhp-67524")
             .build()
 
         return chain.proceed(
