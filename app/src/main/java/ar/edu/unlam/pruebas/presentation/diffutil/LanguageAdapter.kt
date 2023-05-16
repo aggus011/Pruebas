@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
-import ar.edu.unlam.pruebas.R
-import ar.edu.unlam.pruebas.databinding.ItemLanguageBinding
+import ar.edu.unalm.pruebas.R
+import ar.edu.unalm.pruebas.databinding.ItemLanguageBinding
 import ar.edu.unlam.pruebas.entities.Language
 
 class LanguageAdapter(var list: MutableLiveData<MutableList<Language>>) :
