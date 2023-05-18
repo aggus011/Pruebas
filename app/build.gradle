@@ -79,4 +79,7 @@ dependencies {
     // Kotlin
     implementation "androidx.fragment:fragment-ktx:$fragment_version"
 
+    //apache
+    implementation 'org.apache.commons:commons-text:1.9'
+
 }

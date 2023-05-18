@@ -35,11 +35,11 @@ class HomeFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        languageViewModel.getAllLanguage()
+        /*languageViewModel.getAllLanguage()
         languageViewModel.allLanguage.observe(viewLifecycleOwner) {
             if (it != null)
                 createRecyclerView()
-        }
+        }*/
 
     }
 

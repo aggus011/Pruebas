@@ -9,6 +9,6 @@ class LanguageRepository @Inject constructor() {
 
 
     suspend fun getAllLanguages(): Response<SupportedLanguage> {
-        return FluentAPI.getInstance().getAllLenguages()
+        return FluentAPI.getInstance().getAllLanguages()
     }
 }

@@ -10,7 +10,7 @@ class FluentAPI {
 
 
     companion object{
-        private const val baseUrl = "https://thefluent.me/api/swagger/"
+        private const val baseUrl = "https://thefluentme.p.rapidapi.com/"
         private fun buildService(): ApiService {
             val okHttpClient = OkHttpClient.Builder()
                 .connectTimeout(1, TimeUnit.MINUTES)
