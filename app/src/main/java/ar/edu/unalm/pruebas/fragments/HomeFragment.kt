@@ -35,6 +35,8 @@ class HomeFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
+        //languageViewModel.main()
+
         /*languageViewModel.getAllLanguage()
         languageViewModel.allLanguage.observe(viewLifecycleOwner) {
             if (it != null)
@@ -43,9 +45,9 @@ class HomeFragment : Fragment() {
 
     }
 
-    private fun createRecyclerView() {
+    /*private fun createRecyclerView() {
         val adapter = LanguageAdapter(languageViewModel.allLanguage)
         binding.languageRv.layoutManager = LinearLayoutManager(context)
         binding.languageRv.adapter = adapter
-    }
+    }*/
 }

@@ -50,7 +50,17 @@
         app:layout_constraintStart_toEndOf="@+id/microphoneButton"
         app:layout_constraintBottom_toBottomOf="@+id/microphoneButton"/>
 
-    <androidx.recyclerview.widget.RecyclerView
+
+    <TextView
+        android:id="@+id/comparedTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="texto comparado"
+        app:layout_constraintTop_toBottomOf="@+id/voiceText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <!--<androidx.recyclerview.widget.RecyclerView
         android:id="@+id/language_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,6 +71,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/microphoneButton"
         app:layout_constraintVertical_bias="0.035"
-        tools:listitem="@layout/item_language" />
+        tools:listitem="@layout/item_language" /> -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
