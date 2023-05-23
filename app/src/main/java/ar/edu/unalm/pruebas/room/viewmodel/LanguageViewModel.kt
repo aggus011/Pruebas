@@ -22,6 +22,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.lang3.builder.Diff
+import org.apache.commons.lang3.builder.DiffBuilder
 import org.apache.commons.text.diff.EditScript
 import org.apache.commons.text.diff.StringsComparator
 import java.lang.Error
@@ -51,19 +52,55 @@ class LanguageViewModel @Inject constructor(private val languageRepository: ar.e
             Log.e(TAG, "Error $e")
         }
     }
+
     fun getDifference(originalText: String, revisedText: String) =
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val result = languageRepository.getDifference(originalText, revisedText)
-                if (result.body() != null)
+                if (result.body() != null) {
+                    difference.value?.removed
                     difference.postValue(result.body()!!)
-            }catch (e: NullPointerException){
+                }
+            } catch (e: NullPointerException) {
                 Log.e(TAG, "Call is null $e")
-            }
-            catch (e: Error){
+            } catch (e: Error) {
                 Log.e(TAG, "Error! $e")
             }
         }
+
+    fun convertToText(originalText: String): String {
+        return getStringBuilder(originalText)
+    }
+
+    private fun getStringBuilder(originalText: String): String {
+        val diffBuilder = StringBuilder()
+        var errors = 0
+        for (f in difference.value!!.rows[0].right.chunks) {
+            when (f.type) {
+                "equal" -> diffBuilder.append(f.value)
+                "insert" -> {
+                    diffBuilder.append("<font color='#FF0000'>${f.value}</font> ")
+                    errors++
+                }
+
+                "removed" -> diffBuilder.append("<font color='#FF0000'>---</font>")
+                else -> break
+            }
+        }
+        val total = wordCounter(originalText)
+        val average = errors * 100 / total
+        Log.d(TAG, "errors: $errors")
+        Log.d(TAG, "original: $total")
+        Log.d(TAG, "promedio $average")
+        return if (average >= 0)
+            diffBuilder.toString()
+        else "Correct"
+    }
+
+    private fun wordCounter(texto: String): Int {
+        val words = texto.trim().split("\\s+".toRegex())
+        return words.size
+    }
 
     /*
         fun encontrarDiferencias(texto1: String, texto2: String): Pair<List<String>, List<String>> {
