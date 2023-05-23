@@ -14,9 +14,7 @@ class KeyInterceptor : Interceptor {
 
         return chain.proceed(
             request.newBuilder()
-                .addHeader("X-RapidAPI-Key", "aa80c24d7cmsha299a56a4e26655p1b619ejsn56d2467feec0")
-                .addHeader("X-RapidAPI-Host", "thefluentme.p.rapidapi.com")
-                //.addHeader("x-access-token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFnZ3VzMDExIiwiZXhwIjoxNjg0MjkyNzg5fQ.zerj-WGUZxQzxL_QqiorB_5R0eoZT-77TdcLYcstI0I")
+                .addHeader("Content-Type", "application/json")
                 .url(newUrl)
                 .build()
         )
