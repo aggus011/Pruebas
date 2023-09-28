@@ -1,21 +1,21 @@
 package ar.edu.unalm.pruebaspeechtotext.fragments
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import ar.edu.unalm.pruebaspeechtotext.databinding.FragmentHomeBinding
-import ar.edu.unalm.pruebaspeechtotext.room.viewmodel.LanguageViewModel
+import com.google.zxing.integration.android.IntentIntegrator
 
-class HomeFragment: Fragment() {
+class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    //view models
-    private val languageViewModel by activityViewModels<LanguageViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,14 +30,29 @@ class HomeFragment: Fragment() {
 
     override fun onStart() {
         super.onStart()
-
-        languageViewModel.allLanguage.observe(viewLifecycleOwner){
-            createRecyclerView()
-        }
-
+        binding.btnScanner.setOnClickListener { initScanner() }
     }
 
-    private fun createRecyclerView() {
-        val adapter = LanguageAdapter(languageViewModel.allLanguage)
+    private fun initScanner() {
+        IntentIntegrator(requireActivity()).initiateScan()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+
+        if (result != null) {
+
+            if (result.contents == null) {
+                Toast.makeText(requireContext(), "sin contenido", Toast.LENGTH_SHORT).show()
+                binding.txt.text = "Sin contenido"
+                binding.txt.visibility = View.VISIBLE
+            } else {
+                Toast.makeText(requireContext(), "Escaneo exitoso", Toast.LENGTH_SHORT).show()
+                binding.txt.visibility = View.VISIBLE
+
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
     }
 }
